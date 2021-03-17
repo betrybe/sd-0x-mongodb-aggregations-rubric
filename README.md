@@ -69,12 +69,19 @@ Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
 
 ---
 
+## Data de Entrega
+
+  - Serão `X` dias de projeto.
+  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+
+---
+
 # Instruções para entregar seu projeto:
 
 ## ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone https://github.com/betrybe/sd-0x-mongodb-aggregations-rubric`.
+  * `git clone https://github.com/betrybe/sd-0x-mongodb-aggregations`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-0x-project-mongodb-aggregations`
 
@@ -133,24 +140,6 @@ Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
 
 ---
 
-## DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
----
-
-
-
 # Como desenvolver
 Se atente a [Instrução para estrutura dos arquivos](#Instrução-para-estrutura-dos-arquivos), ela é essencial para a avaliação do projeto.
 
@@ -165,7 +154,6 @@ Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install
 Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ---
-
 
 ## Instrução para estrutura dos arquivos 
 
@@ -465,18 +453,17 @@ O resultado da sua query deve ter o seguinte formato:
 
 
 ---
+### Revisando um pull request
 
-### REVISANDO UM PULL REQUEST
+À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
 
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV 🚀
+Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
 
 # Avisos Finais
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
