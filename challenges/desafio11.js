@@ -10,8 +10,8 @@ db.trips.aggregate([
   {
     $project: {
       _id: false,
-      total: "$total",
       diaDaSemana: "$_id",
+      total: "$total",
     },
   },
   {
