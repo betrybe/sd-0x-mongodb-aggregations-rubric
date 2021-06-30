@@ -45,7 +45,7 @@ do
   fi
   # Exec mongo query
   mql=$(cat "$mqlFile" | sed -r "s/;+$//")
-  scripts/exec.sh "$mql" | jq -S &> "$resultPath"
+  scripts/exec.sh "$mql" | jq ._batch[] -S &> "$resultPath"
   # Sort expected result
   cat "$TRYBE_DIR/expected-results/$chName" | jq -S > "/tmp/expected_sorted"
   # Check result with the expected
