@@ -1,2 +1,8 @@
-{ "tipo" : "Subscriber", "duracaoMedia" : 0.22 }
-{ "tipo" : "Customer", "duracaoMedia" : 0.71 }
+{
+  "duracaoMedia": 0.71,
+  "tipo": "Customer"
+}
+{
+  "duracaoMedia": 0.22,
+  "tipo": "Subscriber"
+}

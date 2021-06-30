@@ -1,1 +1,4 @@
-{ "_id" : "SkyTeam", "totalRotas" : 8 }
+{
+  "_id": "SkyTeam",
+  "totalRotas": 8
+}
