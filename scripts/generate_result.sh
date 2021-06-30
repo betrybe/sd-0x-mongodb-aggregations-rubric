@@ -44,10 +44,12 @@ do
     continue
   fi
   # Exec mongo query
-  mql=$(cat "$mqlFile")
-  scripts/exec.sh "$mql" &> "$resultPath"
+  mql=$(cat "$mqlFile" | sed -r "s/;+$//")
+  scripts/exec.sh "$mql" | jq ._batch[] -S &> "$resultPath"
+  # Sort expected result
+  cat "$TRYBE_DIR/expected-results/$chName" | jq -S > "/tmp/expected_sorted"
   # Check result with the expected
-  diff=$(diff "$resultPath" "$TRYBE_DIR/expected-results/$chName")
+  diff=$(diff "$resultPath" "/tmp/expected_sorted" --ignore-all-space)
   if [[ ! -z "$diff" ]]; then
     printf "\n%s: \e[1;31mfailed \e[0m" "$chName" >> "$RESULTS_DIR/evaluation.out"
     print_results

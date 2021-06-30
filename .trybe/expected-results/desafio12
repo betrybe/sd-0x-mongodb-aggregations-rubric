@@ -1,1 +1,4 @@
-{ "nomeEstacao" : "Pershing Square North", "total" : 5391 }
+{
+  "nomeEstacao": "Pershing Square North",
+  "total": 5391
+}
