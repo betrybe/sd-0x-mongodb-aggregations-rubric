@@ -61,11 +61,18 @@ Neste projeto você será capaz de:
 
 É isso aí, mais um bloco finalizado! Agora chegamos ao fim do último bloco do nosso módulo de NoSQL e MongoDB. Você viu vários métodos e operadores para executar operações de agregação de dados no **MongoDB**, e vai colocá-los em prática em mais um projeto.
 
-Para esse projeto, diferentemente dos outros, você vai utilizar vários datasets, de forma que possa praticar em vários cenários os diversos operadores e estágios do `aggregation pipeline`.
+Para esse projeto, diferentemente dos outros, você vai utilizar várias coleções, de forma que possa praticar em vários cenários os diversos operadores e estágios do `aggregation pipeline`.
 
 Vamos trabalhar com dados do **IMDB**, dados sobre empresas aéreas e também dados que contenham registros de deslocamento de pessoas que utilizam bicicletas. Esperamos que você curta muito o projeto e fixe muito bem o que aprendeu até aqui!
 
 Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
+
+---
+
+## Data de Entrega
+
+    - Serão `X` dias de projeto.
+    - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
 ---
 
@@ -74,9 +81,9 @@ Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
 ## ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone https://github.com/betrybe/sd-0x-mongodb-aggregations-rubric`.
+  * `git clone https://github.com/tryber/sd-0x-mongodb-aggregations`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-project-mongodb-aggregations`
+    * `cd sd-0x-mongodb-aggregations`
 
 2. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
@@ -106,13 +113,13 @@ Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
   * Usando o exemplo anterior: `git push -u origin seu-nome-mongodb-aggregations`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-mongodb-aggregations/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-mongodb-aggregations/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-mongodb-aggregations/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-mongodb-aggregations/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -133,24 +140,6 @@ Então vamos lá aplicar seu conhecimento nesses cenários muito legais! 😉
 
 ---
 
-## DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
----
-
-
-
 # Como desenvolver
 Se atente a [Instrução para estrutura dos arquivos](#Instrução-para-estrutura-dos-arquivos), ela é essencial para a avaliação do projeto.
 
@@ -165,7 +154,6 @@ Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install
 Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ---
-
 
 ## Instrução para estrutura dos arquivos 
 
@@ -195,7 +183,7 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
 
 ## Instruções para restaurar o banco de dados `aggregations`
 
-1. Abra o terminal e conecte-se à sua instância local do **MongoDB**. Se você receber uma mensagem de erro com uma mensagem como ***Connection refused***, tente reiniciar sua instância ([veja como fazer isso aqui](https://course.betrybe.com/back-end/mongodb/introduction/#conectando)).
+1. Abra o terminal e conecte-se à sua instância local do **MongoDB**. Se você receber uma mensagem de erro com uma mensagem como ***Connection refused***, tente reiniciar sua instância ([veja como fazer isso aqui](https://app.betrybe.com/course/back-end/introducao-ao-mongodb/mongodb-introducao/d396e5a2-d5c9-4f3a-b723-1a1d3ea06b3d/conteudos/b9646f17-77fc-401e-bab5-421fdc37428e/conectando/f63aa7aa-ac8f-4253-bf76-7fc71e4eac5a?use_case=side_bar)).
 
 2. Agora que você tem certeza de que a sua instância está no ar e que você está conectado a ela, digite `exit`. Você voltará ao terminal para iniciar a importação dos dados.
 
@@ -206,7 +194,7 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
 
   * A execução desse script criará um banco de dados chamado `aggregations` e importará todas as suas coleções.
 
-⚠️ Como tanto esse script quanto o script de execução local dos testes (mostrado na [seção seguinte](#implementações-técnicas)), **restauram a base de dados `aggregations`**, se atente a salvar seu progresso nos arquivos de desafio! ⚠️
+⚠️ Como tanto esse script quanto o script de execução local dos testes (mostrado na [seção seguinte](#execução-de-testes-unitários)), **restauram a base de dados `aggregations`**, se atente a salvar seu progresso nos arquivos de desafio! ⚠️
 
 ---
 
@@ -218,6 +206,12 @@ Para executar localmente os testes, é preciso escrever o seguinte no seu termin
 ```
 
 Esse script passará por **todos os desafios** e imprimirá um relatório indicando se passou ou não para cada desafio. Como a execução do script **envolve restauração da base de dados `aggregations`** de um teste para outro, recomenda-se esperar pela sua execução completa.
+
+Para executar somente o teste de um desafio, execute o comando abaixo, substituindo N pelo númedo do desafio
+
+```sh
+./scripts/evaluate.sh desafioN
+```
 
 ⚠️ Como na avaliação o banco de dados `aggregations` é restaurado de um teste para outro, **se atente a fazer uso do banco restaurado na hora de fazer um desafio**. ⚠️
 
@@ -235,7 +229,7 @@ Ajude a Trybe a escolher um filme para a próxima noite! Baseado em uma pesquisa
 
 #### Retorne todos os filmes que satisfaça, através de uma  _pipeline_, as condições abaixo
 
-* `imdb.rating` deve ser ao menos `7`;
+* `imdb.rating` deve ser maior ou igual a `7`;
 * `genres` não deve conter `Crime` ou `Horror`;
 * `rated` deve ser igual a `PG` ou `G`;
 * `languages` contém `English` e `Spanish`.
@@ -250,7 +244,7 @@ A escolha do filme da noite foi um sucesso, mas infelizmente ficamos com nossa b
 #### Utilizando o mesmo _pipeline_ anterior, retorne apenas os campos `title`, `rated`, `imdb.rating`, `imdb.votes` e `year`, modificando seus nomes para `titulo`, `avaliado`, `notaIMDB`, `votosIMDB` e `ano`, respectivamente.
 
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "titulo" : "A Streetcar Named Desire", "avaliado" : "PG", "notaIMDB" : 8.1, "votosIMDB" : 72364, "ano" : 1951 }
@@ -261,9 +255,9 @@ O resultado da sua query deve ter o seguinte formato:
 
 Agora que você tem os campos essenciais, aplique mais um estágio na pipeline do desafio anterior que atenda a seguinte demanda:
 
-#### Retorne esses filmes ordenados por ano e nota IMDB de forma decrescente e por ordem alfabética.
+#### Retorne esses filmes ordenados por ano e nota IMDB de forma decrescente e título por ordem alfabética.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "titulo" : "McFarland, USA", "avaliado" : "PG", "notaIMDB" : 7.5, "votosIMDB" : 14091, "ano" : 2015 }
@@ -272,7 +266,7 @@ O resultado da sua query deve ter o seguinte formato:
 
 ### Desafio 4
 
-Nosso dataset de filmes tem muitos documentos diferentes, alguns com títulos "mais complexos" do que outros. Se quisermos analisar nossa coleção para encontrar títulos de filmes que têm uma só palavra no título, poderíamos buscar todos os filmes do dataset e processar isso na aplicação, mas o `Aggregation Framework` nos permite fazer isso diretamente no lado do banco de dados.
+Nossa coleção de filmes tem muitos documentos diferentes, alguns com títulos "mais complexos" do que outros. Se quisermos analisar nossa coleção para encontrar títulos de filmes que têm uma só palavra no título, poderíamos buscar todos os filmes da coleção e processar isso na aplicação, mas o `Aggregation Framework` nos permite fazer isso diretamente no lado do banco de dados.
 
 #### Crie uma _pipeline_ que retorna documentos  com o novo campo `title_split`, ela deve seguir as seguintes condições:
 
@@ -282,14 +276,14 @@ Nosso dataset de filmes tem muitos documentos diferentes, alguns com títulos "m
 
 Por exemplo, `"Cinderela"` e `"3-25"` devem entrar nessa contagem, mas `"Cast Away"` não.
 
-Dica: utilize os operadores `$split`, `$size` e `$sort` para te auxiliar.
+**Dica:** utilize os operadores `$split`, `$size` e `$sort` para te auxiliar.
 [Documentação do $split](https://docs.mongodb.com/manual/reference/operator/aggregation/split/)
 
 Sua query deve retornar `8068` documentos.
 
 ### Desafio 5
 
-Temos outra noite de filme aqui na Trybe e, desta vez, nós perguntamos à equipe quais são seus atores ou atrizes preferidos. Aqui está o resultado:
+Temos outra noite de filme aqui na Trybe e, desta vez, nós perguntamos à equipe quais são suas pessoas preferidas como atores e/ou atrizes. Aqui está o resultado:
 
 * Sandra Bullock
 * Tom Hanks
@@ -299,19 +293,14 @@ Temos outra noite de filme aqui na Trybe e, desta vez, nós perguntamos à equip
 
 #### Considerando esta lista, crie uma _pipeline_ que retorne o `title` do vigésimo quinto filme da agregação que satisfaz as seguintes condições:
 
-- `countries` é Estados unidos
+- `countries` é Estados unidos no banco estará classificado como USA
 - `tomatoes.viewer.rating` maior ou igual a `3`
--  Crie um novo campo chamado `num_favs`, que represente quantos atores ou atrizes da nossa lista de favoritos aparecem no elenco (campo `cast`) do filme.
+-  Crie um novo campo chamado `num_favs`, que represente quantos atores ou atrizes da nossa lista de favoritos aparecem no elenco (informação do campo `cast` no banco) do filme, caso ele possua favoritos.
 - Ordene os resultados por `num_favs`, `tomatoes.viewer.rating` e `title`, todos em ordem decrescente.
-<!-- Para filmes lançados nos Estados Unidos (campo `countries`), com `tomatoes.viewer.rating` maior ou igual a `3`, crie um novo campo chamado `num_favs`, que represente quantos atores ou atrizes da nossa lista de favoritos aparecem no elenco (campo `cast`) do filme.
 
-Ordene os resultados por `num_favs`, `tomatoes.viewer.rating` e `title`, todos em ordem decrescente.
+**Dica:** coloque a lista de atores e atrizes favoritos em uma variável e explore operadores como `$size` e [`$setIntersection`](https://docs.mongodb.com/manual/reference/operator/aggregation/setIntersection/index.html).
 
-Por fim, utilizando o mesmo _pipeline_, responda: Qual o **título** do vigésimo quinto filme do resultado dessa agregação? -->
-
-Dica: coloque a lista de atores e atrizes favoritos em uma variável e explore operadores como `$size` e [`$setIntersection`](https://docs.mongodb.com/manual/reference/operator/aggregation/setIntersection/index.html).
-
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "title" : <nome_do_filme> }
@@ -321,11 +310,11 @@ O resultado da sua query deve ter o seguinte formato:
 
 Vamos explorar mais operadores aritméticos!
 
-#### Considerando todos os filmes que ganharam o Oscar pelo menos uma vez, calcule o **maior valor**, **menor valor**, **média** e o **desvio padrão** das avaliações (campo `imdb.rating`)
+#### Considerando todos os filmes que ganharam o Oscar pelo menos uma vez, calcule o **maior valor**, **menor valor**, **média** e o **desvio padrão** das avaliações (informação do campo `imdb.rating` no banco)
 
 - Para a média e o desvio padrão arredonde os valores para uma casa decimal utilizando o [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/index.html).
 
-Dica: todos os filmes na coleção, que já ganharam um Oscar, começam com uma sequência de string parecida com essas abaixo, portanto `$regex` é um operador bem-vindo:
+**Dica:** todos os filmes na coleção, que já ganharam um Oscar (informação do campo `awards` no banco), começam com uma sequência de string parecida com essas abaixo, portanto `$regex` é um operador bem-vindo:
 
 ```
 Won 10 Oscars
@@ -334,7 +323,7 @@ Won 1 Oscar
 
 Utilizem o [`$stdDevSamp`](https://docs.mongodb.com/manual/reference/operator/aggregation/stdDevSamp/index.html) para calcular o desvio padrão.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 {
@@ -349,13 +338,15 @@ O resultado da sua query deve ter o seguinte formato:
 
 Vamos nos aprofundar um pouco mais em nossa coleção de filmes. 
 
-#### Conte quantos filmes cada um dos atores e atrizes do elenco (`cast`) já participou e obter uma média do campo `imdb.rating` para cada um desses atores e atrizes.
+#### Conte quantos filmes cada um dos atores e atrizes do elenco (`cast` no banco) já participou e obtenha uma média do campo `imdb.rating` para cada um desses atores e atrizes.
 
-- Traga o nome do ator ou atriz, número de filmes em que participou e a média do imdb desses filmes arredondada para uma casa decimal usando o operador [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/index.html). 
+- Traga o nome do ator ou atriz;
+- Número de filmes em que participou
+- Média do imdb desses filmes arredondada para uma casa decimal usando o operador [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/index.html).
 - Considere somente os membros do elenco de filmes com o idioma inglês (`English`). 
 - Exiba a lista em ordem decrescente de documentos pelo número de filmes e nome do ator ou atriz.
 
-Sua query deve retornar `47055` documentos. Cada documento no resultado deve ter o seguinte formato:
+Sua query deve retornar `47055` documentos. Cada documento no resultado deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "_id" : "John Wayne", "numeroFilmes" : 107, "mediaIMDB" : 6.4 }
@@ -363,7 +354,7 @@ Sua query deve retornar `47055` documentos. Cada documento no resultado deve ter
 
 ### Desafio 8
 
-Trocando de contexto, vamos utilizar nosso outro dataset que contém dados de empresas aéreas, suas rotas, seus voos e parcerias.
+Trocando de contexto, vamos utilizar nossa outra coleção que contém dados de empresas aéreas, suas rotas, seus voos e parcerias.
 
 #### Liste todas as parcerias da coleção `air_alliances`, que voam rotas com um Boing 747 ou um Airbus A380 , para descobrir qual delas tem o maior número de rotas com esses aviões.
 
@@ -371,7 +362,7 @@ No campo `airplane`, na coleção `air_routes`:
 - Boing 747 está abreviado para `747`
 - Airbus A380 está abreviado para `380`
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "_id" : <nome_da_alianca>, "totalRotas" : <total_de_rotas> }
@@ -383,11 +374,11 @@ O resultado da sua query deve ter o seguinte formato:
 
 - Guarde essa informação, você precisará dela mais tarde.
 
-- Não considere documentos com valores vazios (`""`) ou em que o campo não existe!
+- Não considere documentos com valores vazios (`""`) e em que o campo não existe!
 
 - Para este desafio utilize o operador [`$toInt`](https://docs.mongodb.com/manual/reference/operator/aggregation/toInt/index.html) para converter de string para valor inteiro.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "maiorAnoNascimento" : <ano>, "menorAnoNascimento" : <ano> }
@@ -402,7 +393,7 @@ O resultado da sua query deve ter o seguinte formato:
 
 Para arredondar a média use o [`$round`](https://docs.mongodb.com/manual/reference/operator/aggregation/round/index.html).
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "tipo" : <tipo>, "duracaoMedia" : <duracaoMedia> }
@@ -413,9 +404,9 @@ O resultado da sua query deve ter o seguinte formato:
 
 #### Determine qual o dia da semana com maior número de viagens iniciadas.
 
-Dica: Utilize o operador [`$dayOfWeek`](https://docs.mongodb.com/manual/reference/operator/aggregation/dayOfWeek/index.html) para extrair o dia da semana como um número de uma data.
+**Dica:** Utilize o operador [`$dayOfWeek`](https://docs.mongodb.com/manual/reference/operator/aggregation/dayOfWeek/index.html) para extrair o dia da semana como um número de uma data.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "diaDaSemana" : <dia_da_semana>, "total" : <total_de_viagens> }
@@ -427,9 +418,9 @@ O resultado da sua query deve ter o seguinte formato:
 
 - Exiba apenas o nome da estação e o total de viagens.
 
-Dica: Utilize o operador [`$dayOfWeek`](https://docs.mongodb.com/manual/reference/operator/aggregation/dayOfWeek/index.html) para extrair o dia da semana como um número de uma data.
+**Dica:** Utilize o operador [`$dayOfWeek`](https://docs.mongodb.com/manual/reference/operator/aggregation/dayOfWeek/index.html) para extrair o dia da semana como um número de uma data.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "nomeEstacao" : <nome_da_estacao>, "total" : <total_de_viagens> }
@@ -441,7 +432,7 @@ O resultado da sua query deve ter o seguinte formato:
 
 - Arredonde o resultado para cima.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "duracaoMediaEmMinutos" : <duracao_media_em_minutos> }
@@ -453,7 +444,7 @@ O resultado da sua query deve ter o seguinte formato:
 
 - Exiba o resultado em minutos arredondados para cima e em ordem decrescente.
 
-O resultado da sua query deve ter o seguinte formato:
+O resultado da sua query deve ter exatamente o seguinte formato (incluindo a ordem dos campos):
 
 ```javascript
 { "bikeId" : <bike_id>, "duracaoMedia" : <duracao_media> }
@@ -465,18 +456,17 @@ O resultado da sua query deve ter o seguinte formato:
 
 
 ---
+### Revisando um pull request
 
-### REVISANDO UM PULL REQUEST
+À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
 
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV 🚀
+Use o material que você já viu sobre [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) para te ajudar a revisar os projetos que chegaram para você.
 
 # Avisos Finais
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
